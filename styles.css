@@ -1,0 +1,461 @@
+/* NORMALIZE */
+
+/* ================================================ */
+
+html,
+body,
+div,
+span,
+applet,
+main,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers*/
+
+article,
+aside,
+details,
+main,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Tahoma, sans-serif;
+  line-height: 1;
+  background-color: #ffffff;
+  height: 100%;
+  position: relative;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-width: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+input,
+textarea {
+  color: #333;
+  outline: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+td,
+form {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  transition: all 0.3s linear;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix:after,
+.wrapper:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+body {
+  color: #222;
+  font: 400 10px "Varela Round", Arial, sans-serif;
+  background: #FFF;
+}
+
+/* MAIN STYLES */
+
+/* ================================================ */
+
+
+/* Buttons
+     @mixin ===================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  height: 30px;
+  background-color: #1f4ba5;
+  padding: 0 25px;
+  border-radius: 20px;
+  font-family: "Varela Round", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.favorite {
+  color: #b8b8b8;
+  font-family: "PT Serif", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px;
+}
+
+.favorite .icon {
+  font-size: 14px;
+}
+
+.favorite:hover {
+  color: #fff;
+}
+
+/* Header
+     @mixin ===================== */
+
+/*
+ *  ==== Product
+ */
+/* --------.styler стилизируется в файле custom.js при помощи библиотеки jquerry*/
+
+
+.box-product {
+  display: flex;
+  flex-wrap: wrap;
+/*  margin-right: -1px;*/
+}
+.product {
+  position: relative;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  width: 14.285%;
+  padding: 26px 30px;
+  text-align: center;
+}
+
+.product:before {
+  content: '';
+  display: block;
+  z-index: 1;
+  position: absolute;
+  /*top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0*/
+  top: 50%;  /*делает чёрный при наведении фон */
+  left: 50%; /*делает чёрный при наведении фон */
+  height: 0; /*делает чёрный при наведении фон */
+  width: 0; /*делает чёрный при наведении фон */
+  background: #222;
+  opacity: 0.95;
+  transition: all 0.4s;
+}
+
+.product:hover.product:before{ /*делает чёрный при наведении фон */
+  height: 100%; /*делает чёрный при наведении фон */
+  width: 100%; /*делает чёрный при наведении фон */
+  left: 0; /*делает чёрный при наведении фон */
+  top: 0;/*делает чёрный при наведении фон */
+}
+.product__title {
+  position: relative;
+  z-index: 2;
+  color: #222;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.product__title a {
+  color: inherit;
+}
+
+.product__title a:hover {
+  text-decoration: underline;
+}
+
+.product__img {
+  position: relative;
+  margin: 45px 0 60px;
+}
+
+.product__img img {
+  display: block;
+  width: 100%;
+  margin: 0 auto
+}
+
+.product:hover .product__title, .product:hover .price, .product:hover .discount{
+  color: #fff;
+}
+
+
+.product:hover .product__footer{
+  position: relative;
+  z-index: 2;
+}
+.product:hover .product__card{
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s
+}
+
+.product__card {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -30px;
+  right: -30px;
+  padding: 0 10px;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  transition: all 0.4s;
+}
+
+.product__card .btn {
+  margin-left: 10px;
+}
+
+.product__card .favorite {
+  display: inline-block;
+  margin-top: 15px;
+  color: #b8b8b8;
+  font-family: "PT Serif", sans-serif;
+  font-size: 12px;
+  font-style: italic; 
+  line-height: 18px;
+}
+
+.product__card  .icon{
+  font-size: 14px;
+}
+.favorite:hover{
+  color: #fff;
+}
+
+.product__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__footer .price,
+.product__footer .discount,
+.product__footer .pbadge {
+  width: 33.33%;
+}
+
+ .price{ 
+  color: #000;
+  font-family: "Varela Round", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+.discount {
+  color: #a1a1a1;
+  font-family: Oswald;
+  font-size: 8px;
+  font-weight: 700;
+  text-decoration: line-through;
+  letter-spacing: 0.8px;
+}
+
+.product__footer.hit,
+.product__footer.new {
+  justify-content: flex-start;
+}
+.product__footer .discount {
+  text-align: right;
+}
+
+.product .price {
+  transition: all 0.4s;
+}
+/*.product__details {
+  color: #b8b8b8;
+  font-family: "PT Serif", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}*/
+
+./*product__category {
+  color: #b8b8b8;
+  font-family: "PT Serif", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px;
+}
+*/
+
+
+.hide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tab-cont {
+  opacity: 1;
+  transition: opacity 0.4s;
+  visibility: visible;
+}}
+
+
+
